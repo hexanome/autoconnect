@@ -6,7 +6,8 @@
 
 ## Installation
 
-- Lance la commande `bash -c "$(curl https://raw.github.com/hexanome/autoconnect/master/install.sh)"`
+- Lance la commande suivante:
+- `bash -c "$(curl https://raw.github.com/hexanome/autoconnect/master/install.sh)"`
 - Laisse-toi guider par les instructions.
 - Profite ! Plus jamais de CAS, plus jamais de securelogin.arubanetworks.com, tu surfe quand tu veux où tu veux !
 
