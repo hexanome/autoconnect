@@ -7,8 +7,8 @@ echo -n pass:\ ; read -s PASS
 
 echo "Installing service script..."
 curl https://raw.github.com/hexanome/autoconnect/autoconnect | \
-sed "s_USER=user_USER=$(USER)" | \
-sed "s_PASS=pass_PASS=$(PASS)" | \
+sed "s_USER=user_USER=$(USER)_" | \
+sed "s_PASS=pass_PASS=$(PASS)_" | \
 sudo tee /etc/init.d/autoconnect
 echo "service autonnect start" | sudo tee -a /etc/rc.local
 
