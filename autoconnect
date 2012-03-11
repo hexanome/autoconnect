@@ -5,18 +5,13 @@ PASS=pass
 
 do_start() {
   while true ; do
-    IP=$(ifconfig eth0 | grep inet\ )
-    [ -z "$IP" ] && 
-      (
-        ifconfig eth0 up && dhclient eth0 2&>/dev/null 
-      )
-    sleep 10
     C=$(curl -I google.com 2>/dev/null | grep google.com)
     [ -z "$C" ] &&
       (
         curl -k "http://securelogin.arubanetworks.com/cgi-bin/login" \
              -d "user=$USER&fqdn=insa-lyon.fr&password=$PASS" 2&>/dev/null
       )
+    sleep 10
   done &
 }
 

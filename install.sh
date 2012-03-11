@@ -10,6 +10,7 @@ curl https://raw.github.com/hexanome/autoconnect/autoconnect | \
 sed "s_USER=user_USER=$(USER)" | \
 sed "s_PASS=pass_PASS=$(PASS)" | \
 sudo tee /etc/init.d/autoconnect
+echo "service autonnect start" | sudo tee -a /etc/rc.local
 
 echo "Protecting user information..."
 sudo chown root /etc/init.d/autoconnect
